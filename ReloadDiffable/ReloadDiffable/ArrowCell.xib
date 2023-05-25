@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lFM-7A-BpH" customClass="ArrowCell" customModule="ReloadDiffable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1QS-tf-MDe">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPV-c5-l2p">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="chevron.down" catalog="system"/>
+                        <connections>
+                            <action selector="onExpandButtonTouched:" destination="lFM-7A-BpH" eventType="touchUpInside" id="6ip-lV-ETg"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YPV-c5-l2p" firstAttribute="top" secondItem="1QS-tf-MDe" secondAttribute="top" id="3m2-3r-HlR"/>
+                    <constraint firstItem="YPV-c5-l2p" firstAttribute="leading" secondItem="1QS-tf-MDe" secondAttribute="leading" id="60x-98-vFu"/>
+                    <constraint firstAttribute="bottom" secondItem="YPV-c5-l2p" secondAttribute="bottom" id="Cz3-q8-K1q"/>
+                    <constraint firstAttribute="trailing" secondItem="YPV-c5-l2p" secondAttribute="trailing" id="aEy-pm-moI"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="300" height="62"/>
+            <connections>
+                <outlet property="expandButton" destination="YPV-c5-l2p" id="J1J-QP-e1I"/>
+            </connections>
+            <point key="canvasLocation" x="320.61068702290078" y="-8.4507042253521139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+    </resources>
+</document>
